@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+/*  RESET  */
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;  
+}
+
+img{
+    display: block;
+    width: 100%;
+    /* height: auto; */
+}
+
+input, button, textarea{
+    font: inherit;
+}
+
+/*  VARIABLES  */
+:root{
+    --FONT-FAMILY: 'Manrope', sans-serif;
+    --FONT-WEIGHT-700: 700;
+
+    --VERY-DARK-GRAY: #48556A;
+    --DARK-GRAY: #6D7F97;
+    --GRAY: #9EAFC2;
+    --LIGHT-GRAY: #ECF2F8;
+}
+
+/* ||  GENERAL STYLES   */
+html{
+    scroll-behavior: smooth;
+    font-family: var(--FONT-FAMILY);
+}
+
+body{
+    background-color: var(--LIGHT-GRAY);
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.heading{
+    color: var(--VERY-DARK-GRAY);
+}
+
+.description{
+    color: #6E8098;
+}
+
+.profileContainer{
+    display: flex;
+    margin-top: 1.25em;
+    flex-flow: nowrap;
+    justify-content: space-between;
+}
+
+.profileData{
+    display: flex;
+}
+.name{
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.121875px;
+    color: #48556A;
+}
+
+.date{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.121875px;
+    color: #9DAEC2;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 2rem;
+    color: #48556A;
+}
+.attribution a { 
+    color: teal; 
+}
+
+/* ||  MEDIA QUERIES   */
+@media screen and (min-width: 375px){
+    .cardContainer{
+        margin: 74px 36px 74px 36px;
+        /* display: grid; */
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        width: 327px;
+        height: 512px;
+        background-color: #FFFFFF;
+        /* margin-top: 12em; */
+    }
+    .cardContainer img{        
+        position: static;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        width: 327px;
+        height: 200px;
+        margin: 0;
+        object-fit: cover;
+    }  
+    .text{
+        margin: 36px 32px 20px 32px;
+    }
+    .heading{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+    }
+    .description{
+        font-weight: 500;
+        font-size: 12.25px;
+        line-height: 20px;
+        letter-spacing: 0.121875px;
+        margin-top: 1.3rem;
+    }
+    .name{font-weight: 700;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.121875px;
+        flex-wrap: nowrap;
+    }
+    .date{font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.121875px;
+        }
+    .profileContainer{
+        display: flex;
+        margin-top: 2.5em;
+        flex-flow: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .avatar img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 1em;
+    }
+    .profile{
+        display:grid;       
+    }
+    
+    .share{
+        padding: 1rem;
+        background-color: #48556A;
+        display: flex;
+        width: 327px;
+        height: 84px;
+        left: 36px;
+        bottom: 120px;
+        align-items: center;
+        border-radius: 0px 0px 10px 10px;
+        justify-content: left;
+        position: absolute;
+    }
+    .button{
+        z-index: 5;
+    }
+    .button{
+        width: 32px;
+        height: 32px;
+        border: none;
+        background-color: #ECF2F8;
+        border-radius: 100%;
+        justify-content: center;
+    }
+    .share > *{
+        margin-right: 0.8rem;
+    }
+    .shareSvg {
+        display: flex;
+        align-items: center;
+        width: 175px;
+        justify-content: space-evenly;
+    }    
+    .share.hidden {
+        display: none;
+    } 
+}
+
+@media screen and (min-width: 750px){       
+    .cardContainer{
+        display: flex;
+        justify-content: center;
+        width: 730px;
+        height: 280px;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        margin: 260px 355px;
+        box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
+    }
+    .cardContainer img{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        position: relative;
+        width: 300px;
+        height: 280px; 
+    }
+    .text{
+        margin: 2em 2.5em 2em 2.5em;
+    }
+    .heading{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0.25px;
+    }
+    .description{
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 20px;
+        margin-top: 0.75em;
+        letter-spacing: 0.121875px;
+    }
+    .profileContainer{
+        display: flex;
+        margin-top: 1.25em;
+    }
+    .avatar img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 1em;
+    }
+    .profile{
+        display:grid;
+    }
+    
+    .hidden{
+        display: none;
+    }
+    
+    .shareSvg {
+        display: flex;
+        align-items: center;
+        width: 175px;
+        justify-content: space-evenly;
+    }
+    .button{
+        z-index: 5;
+    }
+    .button{
+        width: 32px;
+        height: 32px;
+        border: none;
+        background-color: #ECF2F8;
+        border-radius: 100%;
+        justify-content: center;
+    }
+    .share{
+        width: 248px;
+        height: 67px;
+        left: 925px;
+        top: 380px;
+        background-color: hsl(217, 19%, 35%);
+        box-shadow: 0px 10px 10px rgba(201, 213, 225, 0.503415);
+        border-radius: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+    }
+    .hidden{
+        display: none;
+    }
+    .share:before {
+        display: none;
+    }
+    .triangle{
+        width: 20px;
+        height: 20px;
+        background-color: #48556A;
+        position: absolute;
+        top: 85%;
+        left:35%;
+        transform: rotate(0.375turn);
+    }
+}
